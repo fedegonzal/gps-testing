@@ -26,9 +26,13 @@
                 lng: position.coords.longitude,
                 acc: position.coords.accuracy
             }
+            
             console.log(JSON.stringify(ret));
-          x.innerHTML += JSON.stringify(ret) ;
-        }
+          x.innerHTML += '<p>Latitude: ' + position.coords.latitude +
+            '<br>Longitude: ' + position.coords.longitude + 
+            '<br>Accuracy: ' + position.coords.accuracy +
+            '</p>';
+          }
 
         function showError(error) {
   switch(error.code) {
